@@ -1,0 +1,355 @@
+ul,li{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+body{
+  text-align: left;
+}
+.fs16{
+  font-size: 16px;
+}
+.welcome{
+  float: left;
+  height: 100%;
+  line-height: 42px;
+}
+.welcome img{
+  border-radius: 50%;
+  margin-right: 9px;
+  vertical-align: top;
+}
+.welcome .welcome__user-text{
+  margin-right:39px;
+}
+/* 菜单 */
+.first-menu{
+  height: 70px;
+  margin:0;
+  position: relative;
+  line-height: 70px;
+}
+.first-menu .icon{
+  background-position: 75px;
+  padding-left:70px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-right: 5px solid transparent;
+}
+.first-menu .icon:hover{
+  background-color: #fdb144;
+  border-right: 5px solid #ff9500;
+}
+.first-menu .active .second-menu{
+  display: block;
+} 
+.second-menu{
+  display: none;
+  position: absolute;
+  width: 160px;
+  position: absolute;
+  top: 2px;
+  right: -160px;
+  z-index: 99;
+}
+.second-menu li{
+  width: 140px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 0 30px 30px 0;
+  color: #fff;
+  box-shadow: 0 4px 7px 0 rgba(41,33,0,.34);
+  position: relative;
+}
+
+.home {
+  background-image: url("./../imgs/home_m.png");
+}
+.home:hover {
+  background-image: url("./../imgs/home_h.png");
+}
+.home.is-active {
+  background-image: url("./../imgs/home_s.png");
+}
+.commodity {
+  background-image: url("./../imgs/commodity_m.png");
+}
+.commodity:hover {
+  background-image: url("./../imgs/commodity_h.png");
+}
+.commodity.is-active {
+  background-image: url("./../imgs/commodity_s.png");
+}
+.company {
+  background-image: url("./../imgs/company_m.png");
+}
+.company:hover {
+  background-image: url("./../imgs/company_h.png");
+}
+.company.is-active {
+  background-image: url("./../imgs/company_s.png");
+}
+.order {
+  background-image: url("./../imgs/order_m.png");
+}
+.order:hover {
+  background-image: url("./../imgs/order_h.png");
+}
+.order.is-active {
+  background-image: url("./../imgs/order_s.png");
+}
+.video {
+  background-image: url("./../imgs/video_m.png");
+}
+.video:hover {
+  background-image: url("./../imgs/video_h.png");
+}
+.video.is-active {
+  background-image: url("./../imgs/video_s.png");
+}
+.announcement {
+  background-image: url("./../imgs/announcement_m.png");
+}
+.announcement:hover {
+  background-image: url("./../imgs/announcement_h.png");
+}
+.announcement.is-active {
+  background-image: url("./../imgs/announcement_s.png");
+}
+.chitchat {
+  background-image: url("./../imgs/chitchat_m.png");
+}
+.chitchat:hover {
+  background-image: url("./../imgs/chitchat_h.png");
+}
+.chitchat.is-active {
+  background-image: url("./../imgs/chitchat_s.png");
+}
+.notice {
+  background-image: url("./../imgs/notice_m.png");
+}
+.notice:hover {
+  background-image: url("./../imgs/notice_h.png");
+}
+.notice.is-active {
+  background-image: url("./../imgs/notice_s.png");
+}
+.finance {
+  background-image: url("./../imgs/finance_m.png");
+}
+.finance:hover {
+  background-image: url("./../imgs/finance_h.png");
+}
+.rim{
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff9500;
+  /* z-index: 999; */
+}
+.second-menu li:first-child {
+  background: url("../imgs/tab1_n.png");
+}
+.second-menu li:nth-child(2) {
+  background: url("../imgs/tab2_n.png");
+}
+.second-menu li:nth-child(3) {
+  background: url("../imgs/tab3_n.png");
+}
+.second-menu li:hover {
+  width: 160px;
+  background: url("../imgs/tab_hover.png");
+  position: relative;
+  z-index: 999;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.first-menu .active .second-menu li:hover:before {
+  width: 12px;
+  height: 80px;
+  content: '';
+  background-image: url("../imgs/tableft_hover.png");
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+/* 财务明细tab */
+.el-finance{
+  margin-top: 30px;
+  font-family: PingFang-SC-Regular;
+}
+.el-finance-tabs::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.el-finance-tabs .el-finance-tab {
+  float: left;
+  position: relative;
+  width: 151px;
+  height: 70px;
+  font-size: 18px;
+  line-height: 70px;
+  text-align: center;
+}
+.el-finance-tabs .el-finance-tab.income-deta{
+  border-radius: 16px 16px 0 0;
+  background-color: #eaeaea;
+}
+.el-finance-tabs .el-finance-tab.cash-out {
+  border-radius: 16px 16px 0 0;
+  background-color: #eaeaea;
+}
+.el-finance .el-finance-tabs .el-finance-tab.income-deta.active{
+  box-shadow: 0 0 6px 0 rgba(41,33,0,.12);
+  background-color: #fcfcfc;
+  color: #ff9500;
+}
+.el-finance-container{
+  padding-top:20px; 
+  margin-left: -15px;
+  margin-right: -15px;
+  background:#fff;
+}
+.el-finance-container .today-income{
+  padding: 34px 0 34px 43px;
+  background-color: #fff;
+  box-shadow: 0 0 6px 0 rgba(41,33,0,.12);
+  border-radius: 10px;
+}
+.el-finance-container .today-income::after{
+  content: '';
+  display:table;
+  clear: both;
+}
+.el-finance-container .today-income div.label {
+  float: left;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+}
+.el-finance-container .today-income div.label .income-icon {
+  display: inline-block;
+  width: 34px;
+  height: 30px;
+  vertical-align: sub;
+  background-image: url('./../imgs/income_icon.png');
+  background-size: 100% 100%;
+}
+.el-finance-container .today-income div.label .today-title{
+  padding: 0 15px 0 8px;
+}
+.el-finance-container .today-income .today-income-cost{
+  float: left;
+  height: 44px;
+  line-height: 44px;
+  font-size: 44px;
+  color: #3788ff;
+}
+.today-balance {
+  padding: 34px 0 34px 43px;
+  height: 240px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(41, 33, 0, 0.12);
+  box-shadow: 0px 0px 6px 0px rgba(41, 33, 0, 0.12);
+  border-radius: 10px;
+}
+.today-balance .balance-title {
+  font-size: 20px;
+  color: #323232;
+  text-align: left;
+  line-height: 30px;
+}
+.today-balance .balance-mon {
+  padding-right: 20px;
+
+  font-size: 44px;
+  color: #ff9500;
+  line-height: 44px;
+}
+.today-balance .balance-pie {
+  margin-top: 25px;
+}
+.today-balance .balance-pie .lf {
+  float: left;
+  width: 50%;
+}
+.today-balance .balance-pie .rf {
+  float: left;
+  width: 50%;
+}
+.pie.goods-income{
+  position: relative;
+  background-color: #5B9DFF;
+  color: #5B9DFF;
+}
+
+.pie{
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.pie-title{
+  float: left;
+  height: 60px;
+  margin-left: 10px;
+}
+.pie-title .pie-income{
+  font-size: 14px;
+  line-height: 30px;
+  color: #999999;
+}
+.pie-title .pie-income-mon{
+  font-size: 22px;
+  line-height: 30px;
+  color: #666666;
+}
+.pie.profit {
+  position: relative;
+  color: #ABDAF0;
+  background-color: #ABDAF0;
+}
+.pie.profit span{
+    position: absolute;
+    z-index: 100;
+    top: 22px;
+    left: 8px;
+    right: 8px;
+    text-align: center;
+}
+.pie.goods-income span{
+  position: absolute;
+  z-index: 100;
+  top: 22px;
+  left: 8px;
+  right: 8px;
+  text-align: center;
+}
+.pie.goods-income::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+}
+.pie.profit::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+}
