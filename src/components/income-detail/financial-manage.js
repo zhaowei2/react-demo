@@ -23,6 +23,7 @@ class Section extends React.Component {
           </div>
           <div className="el-finance-container">
             <Row gutter={30}>
+              {/* 今日收入 */}
               <Col span={8}>
                 <Col span={24}>
                   <div className="today-income text-overflow">
@@ -33,6 +34,58 @@ class Section extends React.Component {
                     <div className="today-income-cost">0.000<span className="fs16">元</span></div>
                   </div>
                 </Col>
+                <Col span={24}>
+                  <div className="today-income-detail">
+                    <div className="detail-border"></div>
+                      <div className="income-detail-content">
+                        <div className="all-income">
+                          <div className="title text-overflow">
+                            <div className="lineheight40">
+                              <span className="iconfont fs30 iconshouru_ iconfont-light"></span>
+                              <span className="mode-title">总收入</span>
+                            </div>
+                            <span className="cost ">0.000</span><span className="fs-16">元</span>
+                          </div>
+                        <div className="all-detail">
+                        <div className="detail-item">
+                          <div className="goods-infor">商品收入：</div>
+                          <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                        </div>
+                        <div className="detail-item" >
+                          <div className="goods-infor">合作总收益：</div>
+                          <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                        </div>
+                        <div className="detail-item" >
+                          <div className="goods-infor">交易服务费退还：</div>
+                        <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                      </div>
+                    </div>
+                
+                  </div>
+                <div className="all-income goods-income">
+                  <div className="title text-overflow" >
+                    <div className="lineheight40">
+                      <span className="iconfont fs30 iconshangpin iconfont-light"></span>
+                      <span className="mode-title">商品交易总收入</span>
+                      <span className="iconfont iconwenhao "></span>:
+                    </div>
+                    <span className="cost ">0.000</span><span className="fs-16">元</span>
+                  </div>
+                  <div className="all-detail">
+                    <div className="detail-item">
+                      <div className="goods-infor">商品收入</div>
+                      <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                  <div className="detail-item">
+                    <div className="goods-infor">交易服务费退还：</div>
+                    <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                </Col>
+
               </Col>
               <Col span={8}>
                 <div className="today-income text-overflow" >
@@ -42,6 +95,62 @@ class Section extends React.Component {
                   </div>
                   <div className="today-income-cost">-0.000<span className="fs16">元</span></div>
                 </div>
+
+                <div className="today-income-detail">
+            <div className="detail-border"></div>
+            <div className="income-detail-content">
+              <div className="all-income">
+                <div className="title text-overflow">
+                  <div className="lineheight40">
+                    <span className="iconfont fs30 iconzhichu_ iconfont-light"></span>
+                    <span className="mode-title">总支出</span>
+                      
+                  </div>
+                  <span className="cost">00</span><span className="fs-16">元</span>
+                </div>
+                <div className="all-detail">
+                  <div className="detail-item" >
+                    <div className="goods-infor">商家自用：</div>
+                    <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                  <div className="detail-item" >
+                    <div className="goods-infor">交易服务费：</div>
+                    <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                  <div className="detail-item" >
+                    <div className="goods-infor">商品退款：</div>
+                    <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                   <div className="detail-item" >
+                    <div className="goods-infor text-overflow">已提现收入：</div>
+                    <div className="goods-income">0.000<span className="fs12">元</span></div>
+                  </div>
+                </div>
+                
+              </div>
+              <div className="all-income goods-income">
+                <div className="title">
+                  <div className="lineheight40">
+                    <span className="iconfont fs30 iconshangpin iconfont-light"></span>
+                    <span className="mode-title">商品交易总支出</span>
+
+                     
+                  </div>
+                  <span className="cost">0.000</span><span className="fs-16">元</span>
+                </div>
+                <div className="all-detail">
+                  <div className="detail-item" >
+                    <div className="goods-infor">商品退款：</div>
+                    <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                  <div className="detail-item" >
+                    <div className="goods-infor ">交易服务费：</div>
+                    <div className="goods-income text-overflow">0.000<span className="fs12">元</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
               </Col>
               <Col span={8}>
                 <div className="today-balance" >
@@ -74,6 +183,52 @@ class Section extends React.Component {
                     </div>
                   </div>
                 </div>
+                <div className="balance-detail cash-out" >
+      <div className="balance-detail-title">
+        <div className="goods-netincome">
+          商品交易净收入  
+        </div>
+        <div className="goods-netincome-mon">
+            0.000
+            <span className="fs16">元</span>
+        </div>
+      </div>
+      <div className="goods-pie">
+        <div className="echart" id="echart"></div>
+        <div className="echart-title">商品交易净收入</div>
+        <div className="echart-num" >0<span className="fs16">元</span></div>
+      </div>
+        <div className="echart-detail">
+          <div className="echart-item">
+            <div id="goodsBalanceIncome" className="withdrawable-goods">
+                <span>0%</span>
+              </div>
+              <div className="withdrawable-goods-title">
+                <div className="withdrawable-goods-income">可提现商品净收入：</div>
+                <div className="withdrawable-goods-income-mon">0<span className="fs16">元</span></div>
+            </div>
+          </div>
+         <div className="echart-item">
+            <div id="goodsFrozenIncome" className="withdrawable-goods frozen-income">
+                <span>0%</span>
+              </div>
+              <div className="withdrawable-goods-title">
+                <div className="withdrawable-goods-income ">冻结中商品净收入：</div>
+                <div className="withdrawable-goods-income-mon">0<span className="fs16">元</span></div>
+            </div>
+          </div>
+          <div className="echart-item">
+            <div id="goodsWithdrawIncome" className="withdrawable-goods withdrawal-income">
+                <span>0%</span>
+              </div>
+              <div className="withdrawable-goods-title">
+                <div className="withdrawable-goods-income">已提现商品净收入：</div>
+                <div className="withdrawable-goods-income-mon">0<span className="fs16">元</span></div>
+            </div>
+          </div>
+        </div>
+     
+         </div>
               </Col>
             </Row>
           </div>

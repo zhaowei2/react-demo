@@ -1,0 +1,204 @@
+.today-income-detail {
+  margin-top:20px;
+  background-color: #fbfeff;
+   box-shadow: 0px 0px 6px 0px 
+     rgba(41, 33, 0, 0.12);
+   border-radius: 10px;
+   
+ .detail-border{
+   width: 100%;
+   height: 10px;
+   background-image: linear-gradient(90deg, 
+     #82aeef 0%, 
+     #abe2f0 100%);
+   border-radius: 2px
+ }
+ .all-income{
+   padding:44px 0 0px 0px;
+   &.goods-income{
+     padding-top:0;
+   }
+   .title{
+       padding-left:39px;
+       color:#000;
+     .lineheight40{
+       float: left;
+       height: 40px;
+       line-height: 40px;
+       padding-right:8px;
+       .fs30{
+         position: relative;
+         top:3px;
+       }
+       .mode-title{
+         font-size: 20px;
+       }
+
+     }
+     .cost{
+       font-size: 40px;
+     }
+   }
+
+   .all-detail{
+
+     .detail-item{
+       float:left;
+       box-sizing: border-box;
+       width: 50%;
+       position: relative;
+       border-left: 36px transparent solid;
+       padding: 10px 0px 30px 20px;
+       .goods-infor{
+         font-size: 14px;
+         line-height: 30px;
+         color: #999999;
+       }
+       .goods-income{
+         font-size: 22px;
+         line-height: 30px;
+         color: #666666;
+       }
+       &:before{
+         content:'';
+         position: absolute;
+
+         width: 8px;
+         height:8px;
+         border-radius: 50%;
+         left:1px;
+         top:21px;
+         background-color: #82aeef;
+       }
+     }
+     &:after{
+       content:'';
+       display:table;
+       clear: both;
+     }
+   }
+ }
+}
+
+.balance-detail{
+  margin-top:20px;
+  height: 324px;
+  box-sizing: border-box;
+  padding-top:30px;
+  padding-left:30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px 0px 
+		rgba(41, 33, 0, 0.12);
+	border-radius: 10px;
+  .balance-detail-title{
+    .goods-netincome{
+      float: left;
+      font-size: 18px;
+      line-height: 28px;
+      height: 28px;
+    }
+    .goods-netincome-mon{
+      float: left;
+      font-size: 28px;
+      height: 28px;
+      line-height: 28px;
+    }
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  .goods-pie{
+    float: left;
+    position: relative;
+    .echart{
+      width: 240px;
+      height: 240px;
+    }
+    .echart-title{
+      width: 100%;
+      top: 38%;
+      position: absolute;
+      text-align: center;
+      font-family: PingFang-SC-Medium;
+      font-size: 20px;
+      line-height: 30px;
+      color: #323232;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .echart-num{
+      width: 70%;
+      left: 15%;
+      text-align: center;
+      color: #3788ff;
+      position: absolute;
+      top: 50%;
+      font-size: 30px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .echart-detail{
+    float: left;
+    .echart-item{
+      margin-top:20px;
+      color: #5B9DFF;
+      &:after{
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .withdrawable-goods{
+        float: left;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #5B9DFF;
+        &.frozen-income{
+          background-color: #ABDAF0;
+        }
+        &.withdrawal-income{
+          background-color: #D7D7D7;
+        }
+        span{
+          position: absolute;
+          z-index: 100;
+          top: 22px;
+          left: 8px;
+          right:8px;
+          text-align: center;
+        }
+        &:after{
+          content: '';
+          position: absolute;;
+          width: 50px;
+          height:50px;
+          top:5px;
+          left:5px;
+          display: block;
+          border-radius: 50%;
+          background-color:#fff;
+        }
+      }
+      .withdrawable-goods-title{
+        float: left;
+        margin-left: 10px;
+        .withdrawable-goods-income{
+          font-size: 14px;
+          line-height: 30px;
+          color: #999999
+        }
+        .withdrawable-goods-income-mon{
+          font-size: 22px;
+          line-height: 30px;
+          color: #666666;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,10 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
 import Axios from 'axios';
+import { createStore } from 'redux'
+import counter from './../reducers'
+import {connect} from 'react-redux';
+const store = createStore(counter)
 class NormalLoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +14,7 @@ class NormalLoginForm extends React.Component {
     };
     // this.handleUserNameChange =this.handleUserNameChange.bind(this)
     this.submitAccount =this.submitAccount.bind(this)
+    this.handleIncrement=this.handleIncrement.bind(this)
   }
   handleUserNameChange = event => {
     console.log(event.target.value)
@@ -21,6 +26,10 @@ class NormalLoginForm extends React.Component {
     this.setState({
       strPwd:event.target.value
     }) 
+  };
+  handleIncrement(){
+    store.dispatch({ type: 'INCREMENT' })
+    console.log(store.getState())
   };
   submitAccount(){
     const header ={
@@ -61,6 +70,10 @@ class NormalLoginForm extends React.Component {
  
     return (
       <div>
+        {/* <div>
+          <span>{store.getState()}</span>
+          <button onClick={this.handleIncrement}>INCREMENT</button>
+        </div> */}
         <div style={{textAlign:'left'}}>
           <img style={{width:'50px',height:'50px',margin:'20px'}} src="/imgs/logo_02.png" alt="logo"></img> 
         </div>
@@ -96,4 +109,12 @@ class NormalLoginForm extends React.Component {
     )
   }
 }
+
+function select(state) {
+  console.log(state)
+  return {
+      state: state.appleBusket
+  }
+}
+
 export default NormalLoginForm
